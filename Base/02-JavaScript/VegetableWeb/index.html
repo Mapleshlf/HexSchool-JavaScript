@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔬菜比價網</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><img src="assets/logo.jpg" alt="LOGO"></h1>
+        </div>
+        <div class="content">
+            <ul class="nav">
+                <li><a href="#" class="actived vegetable">蔬果</a></li>
+                <li><a href="#" class="fruit">水果</a></li>
+                <li><a href="#" class="flowers">花卉</a></li>
+            </ul>
+            <div class="search">
+                <label for="text">作物名稱</label>
+                <input type="text" id="text" class="searchTxt" placeholder="請輸入作物名稱">
+                <input type="button" value="搜尋" class="searchBtn">
+            </div>
+            <div class="result">
+                <h2 class="resultTitle">查看 「作物」 的比價結果</h2>
+                <select name="sort" id="sort" class="sort">
+                    <option value="default">排序篩選</option>
+                    <option value="top">依上價排序</option>
+                    <option value="middle">依中價排序</option>
+                    <option value="bottom">依下價排序</option>
+                    <option value="average">依平均價排序</option>
+                    <option value="trade">依交易量排序</option>
+                </select>
+            </div>
+
+            <table class="crop">
+                <tr class="trTitle">
+          <th width="15%">作物名稱</th>
+          <th width="15%">市場名稱</th>
+          <th  width="14%">
+            <div class="inline-flex sort-advanced">上價
+              <span>
+                <i data-price="上價" data-sort="up" class="fas fa-caret-up"></i>
+                
+                <i data-price="上價" data-sort="down" class="fas fa-caret-down"></i>
+              </span>
+            </div>
+          </th>
+          <th width="14%">
+            <div class="inline-flex sort-advanced">中價
+              <span>
+                 <i data-price="中價" data-sort="up" class="fas fa-caret-up"></i>
+                
+                <i data-price="中價" data-sort="down" class="fas fa-caret-down"></i>
+              </span>
+            </div>
+          </th>
+          <th width="14%">
+            <div class="inline-flex sort-advanced">下價
+              <span>
+                 <i data-price="下價" data-sort="up" class="fas fa-caret-up"></i>
+                
+                <i data-price="下價" data-sort="down" class="fas fa-caret-down"></i>
+              </span>
+            </div>
+          </th>
+          <th width="14%">
+            <div class="inline-flex sort-advanced">平均價
+              <span>
+              <i data-price="平均價" data-sort="up" class="fas fa-caret-up"></i>
+                
+                <i data-price="平均價" data-sort="down" class="fas fa-caret-down"></i>
+              </span>
+            </div>
+          </th>
+          <th width="14%">
+            <div class="inline-flex sort-advanced">交易量
+              <span>
+               <i data-price="交易量" data-sort="up" class="fas fa-caret-up"></i>
+                
+                <i data-price="交易量" data-sort="down" class="fas fa-caret-down"></i>
+              </span>
+            </div>
+          </th>
+        </tr>
+                <tr class="trList">
+
+                </tr>
+                <!-- <tr>
+                    <th class="thActived">椰子</th>
+                    <th>台北二</th>
+                    <td>10.0</td>
+                    <td>8.9</td>
+                    <td>5.0</td>
+                    <td>8.3</td>
+                    <td>30.0</td>
+                </tr> -->
+                <tr>
+                    <td colspan="7">請輸入並搜尋想比價的作物名稱^＿^</td>
+                    
+                </tr>
+                <!-- <tr>
+                    <td colspan="7">資料載入中... 請稍後</td>
+                </tr> -->
+            </table>
+
+        </div>
+        <div class="footer"></div>
+        
+    </div><script src="https://kit.fontawesome.com/ba4f146f1e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+</html>

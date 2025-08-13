@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 必修篇最終關卡任務</title>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">TODO LIST</h1>
+        <div class="inputPlace">
+            <input type="text" placeholder="新增待辦事項" class="txt">
+            <a href="#" class="addBtn">+</a>
+        </div>
+        <div class="todoList ">
+            <ul class="listNav">
+                <li><a href="#" class="allList actived">全部</a></li>
+                <li><a href="#" class="notCompleted">待完成</a></li>
+                <li><a href="#" class="Completed">已完成</a></li>
+            </ul>
+            <div class="listContainer">
+                <ul class="listContent">
+                    <li class="listItem" data-num="0">
+                        <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark" checked="unchecked"></span>
+                        </label>
+                        <span class="listText">
+                            把冰箱發霉的檸檬拿去丟
+                        </span>
+                        <input type="button" class="delete" data-num="0">
+                    </li>
+                    
+                    <li class="listItem" data-num="1">
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <span class="checkmark" checked="checked"></span>
+                                </label>
+                                <span class="listText">
+                                    打電話叫媽媽匯款給我
+                                </span>
+                                <input type="button" class="delete" data-num="1">
+                    </li>
+                    
+                    <li class="listItem" data-num="2">
+                                <label class="container">
+                                    <input type="checkbox">
+                                    <span class="checkmark" checked="unchecked"></span>
+                                </label>
+                                <span class="listText">
+                                    整理電腦資料夾
+                                </span>
+                                <input type="button" class="delete" data-num="2" data-checked="unchecked">
+                    </li>
+                    
+                </ul>
+                <div class="listButtons">
+                    <a href="#" class="viewNotCompleted">5 個待完成項目</a>
+                    <a href="#" class="clearCompleted">消除已完成項目</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="js/all.js"></script>
+    <script src="https://kit.fontawesome.com/ba4f146f1e.js" crossorigin="anonymous"></script>
+</body>
+</html>

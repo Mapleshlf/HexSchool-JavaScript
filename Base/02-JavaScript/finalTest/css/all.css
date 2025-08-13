@@ -1,0 +1,309 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 開始程式碼 */
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    background-image: linear-gradient(174deg, #FFD370 2%, #FFD370 46%, #FFFFFF 46%, #FFFFFF 100%, #E8E8E8 100%);
+}
+.content{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding:48px 0 92px 0;
+}
+/* 標題 */
+.title{
+    font-family: BalooTamma2-Bold;
+    font-size: 48px;
+    color: #333333;
+    letter-spacing: 8.75px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+/* 輸入框群組 */
+.inputPlace{
+    border: 1px solid black;
+    background: #ffffff;
+    border-radius: 10px;
+    max-width: 500px;
+    height: 48px;
+    padding: 3px 4px 3px 24px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    
+}
+/* 輸入框 */
+.txt{
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    outline: 0;
+}
+/* 新增按鈕 */
+.addBtn{
+    border-radius: 10px;
+    background: #333333;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.addBtn:hover{
+    background: #bdbaba;
+    color: #333333;
+}
+
+/* 待辦事項區域 */
+/* 主框架 */
+.todoList{
+    max-width: 500px;
+    opacity: 0;
+    /* height: 538px; */
+    margin: 0 auto;
+    background: #FFFFFF 100%;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+/* 點擊後顯示類別 */
+.Actived{
+    opacity: 1;
+}
+
+/* 全部 待完成 已完成選項區 listNav */
+.listNav{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.listNav li{
+    width: 100%;
+    list-style: none;
+}
+.listNav li a{
+    display: block;
+    width: 100%;
+    padding: 16px;
+    font-family: NotoSansCJKtc-Bold;
+    font-size: 14px;
+    text-align: center;
+    color: #333333;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+    border-bottom: 2px solid gray;
+}
+.listNav li .activedNav{
+    border-bottom: 2px solid black;
+}
+
+/* UI UX */
+.listNav li a:hover{
+    background: #f3e51c;
+    color: #020202;
+}
+.listNav li a:focus{
+    background: #f3e51c;
+    color: #020202;
+}
+
+/* 顯示待辦事項區域 */
+/* 框架 */
+.listContainer{
+    padding:16px 48px 32px 24px;
+}
+/* 待辦事項顯示區，用JS實時更新待辦事項 */
+.listContent{
+    padding: 0;
+    margin-bottom: 24px;
+}
+/* 待辦事項樣式 */
+.listItem{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* 自訂checkBox樣式 */
+/* label */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top:-5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius:5px;
+}
+/* On mouse-over, add a grey background color 當滑鼠移過去時，變灰 */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+/* When the checkbox is checked, add a blue background 點擊後區域變藍，這裡為了配合題目，改為消去框框 */
+.container input:checked ~ .checkmark {
+  /* background-color: #2196F3; */
+    border: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) 創建一個打勾符號*/
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked  點擊後顯示按鈕*/
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+/* Style the checkmark/indicator 自定勾勾圖案*/
+.container .checkmark:after {
+  left: 9px;
+  top: 2.5px;
+  width: 5px;
+  height: 10px;
+  border: solid #FFD370;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* 待辦事項文字  未完成*/
+.listText{
+    font-family: NotoSansCJKtc-Regular;
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 0.62px;    
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+    padding: 15px 0;
+    width: 100%;
+    cursor: pointer;
+}
+/* 待辦事項已完成樣式 */
+.completeText{
+    color: #333333 30%;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+/* delete Button */
+.listItem .delete{
+    opacity: 0;
+    border:none;
+    display: block;
+    cursor: pointer;
+    /* position: absolute; */
+    /* right: 0; */
+    width: 1rem;
+    height: 1rem;
+    background: #000;
+    background-image: url("https://i.imgur.com/7Q4RjFx.jpg");
+    background-size: contain;
+}
+
+.listItem:hover .delete{
+    opacity: 1;
+}
+
+
+/* 待辦事項按鈕區 */
+.listButtons{
+    display: flex;
+    justify-content: space-between;
+}
+.listButtons .viewNotCompleted{
+    text-decoration: none;
+    font-family: NotoSansCJKtc-Regular;
+    font-size: 14px;
+    color: #333333;
+    letter-spacing: 0.7px;
+}
+.listButtons .clearCompleted{
+    text-decoration: none;
+    font-family: NotoSansCJKtc-Regular;
+    font-size: 14px;
+    color: #9F9A91;
+    letter-spacing: 0.7px;
+}
